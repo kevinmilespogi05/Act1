@@ -1,0 +1,46 @@
+$form-width: 600px;
+$primary-color: #000000;
+$border-radius: 3px;
+
+.form-control {
+  border-radius: $border-radius;
+  width: $form-width;
+  margin-left: 20px;
+  padding: 12px 16px;  // Added padding for better spacing inside the form
+  border: 1px solid lighten($primary-color, 40%); // Lighter border for a subtle appearance
+  background-color: #f9f9f9; // Light background for better contrast
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Soft shadow for a slight depth effect
+  transition: box-shadow 0.3s ease; // Smooth transition for hover effect
+
+  &:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Enhanced shadow on focus
+    border-color: $primary-color; // Border color change on focus for better visibility
+    outline: none;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 10;
+  right: calc(50% - 20px); // Adjusted position for better alignment
+  top: 50%; // Centered vertically
+  transform: translateY(-50%); // Centered vertically relative to the parent
+  color: $primary-color; // Consistent primary color
+  font-size: 20px; // Slightly larger icon for better visibility
+  cursor: pointer; // Pointer cursor for interactive elements
+  transition: color 0.3s ease; // Smooth color transition
+
+  &:hover {
+    color: darken($primary-color, 20%); // Darker color on hover for a subtle effect
+  }
+}
+
+.navbar {
+  .btn-danger {
+    margin-right: 10px; // Adjust spacing as needed
+  }
+
+  button {
+    margin-left: 10px; // Adjust spacing for CRUD buttons
+  }
+}
